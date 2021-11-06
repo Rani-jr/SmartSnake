@@ -18,7 +18,7 @@ Point = namedtuple('Point', 'x, y')
 
 #colors to use later
 WHITE = (255, 255, 255)
-RED = (0,200,0)
+GREEN = (0,200,0)
 COLOR1_SNAKE = (88, 41, 0)
 COLOR2_SNAKE = (255, 255, 0)
 BLACK = (0,0,0)
@@ -117,7 +117,7 @@ class SmartSnake:
             pg.draw.rect(self.display, COLOR1_SNAKE, pg.Rect(pt.x, pt.y, BLOCK_SIZE, BLOCK_SIZE))
             pg.draw.rect(self.display, COLOR2_SNAKE, pg.Rect(pt.x+4, pt.y+4, 12, 12))
 
-        pg.draw.rect(self.display, RED, pg.Rect(self.food.x, self.food.y, BLOCK_SIZE, BLOCK_SIZE))
+        pg.draw.rect(self.display, GREEN, pg.Rect(self.food.x, self.food.y, BLOCK_SIZE, BLOCK_SIZE))
 
         text = font.render("Score: " + str(self.score), True, WHITE)
         self.display.blit(text, [0, 0])
